@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ 
+	<context:annotation-config />
+	 <context:component-scan base-package="anno"/>
+ 
+	<bean id="orderBean" class="anno.model.Order">
+		<property name="orderId" value="100" />
+		<property name="amount" value="45000" />
+	</bean>
+ 
+ <bean id="customer" class="anno.model.Customer">
+		<property name="customerId" value="1001" />
+		<property name="name" value="The Purchasers" />
+		<property name="address" value="Hyderabad" />
+	</bean>
+ 
+	<bean id="item1" class="anno.model.Item">
+		<property name="itemId" value="201" />
+		<property name="itemName" value="Books" />
+		<property name="quantity" value="828" />
+	</bean>
+ 
+	<bean id="item2" class="anno.model.Item">
+		<property name="itemId" value="301" />
+		<property name="itemName" value="Furniture" />
+		<property name="quantity" value="45" />
+	</bean>
+ 
+</beans>
